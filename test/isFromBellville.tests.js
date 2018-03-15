@@ -1,10 +1,11 @@
 describe("isFromBellville function", function(){
-  // local vairables
-  var regNumber = 'CY982364';
 
   //tests
   it('isFromBellville() should return true if the regitration number is from Bellville', function(){
-    assert.equal(isFromBellville(regNumber), true);
+    assert.equal(isFromBellville('CY982364'), true);
   });
-  
+  it('isFromBellville() should return false if the regitration number is not from Bellville', function(){
+    assert.equal(isFromBellville('CJ982364'), false);
+  });
+
 });
